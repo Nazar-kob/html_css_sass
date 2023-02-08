@@ -9,6 +9,10 @@ $base-shift: calc(($cell-size - $player-size) / 2);
 $count-row: 5;
 $count-column: 3;
 
+@function getShift($base, $index, $cell) {
+  @return $base + ($index - 1) * $cell;
+}
+
 .game {
   position: relative;
   border: 1px gray solid;
@@ -38,13 +42,13 @@ $count-column: 3;
 
     @for $index from 1 through $count-row {
       &--row--#{$index} {
-        top: $base-shift + ($index - 1) * $cell-size;
+        top: getShift($base-shift, $index, $cell-size);
       }
     }
 
     @for $index from 1 through $count-column {
       &--column--#{$index} {
-        left: $base-shift + ($index - 1) * $cell-size;
+        left: getShift($base-shift, $index, $cell-size);
       }
     }
 
