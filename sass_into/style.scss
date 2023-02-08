@@ -48,8 +48,12 @@ $count-column: 3;
       }
     }
 
-    &--color--blue {
-      background-color: blueviolet;
+    $colors: "red" red, "green" green, "blue" blue;
+
+    @each $name, $color in $colors {
+      &--color--#{$color} {
+        background-color: #{$color};
+      }
     }
   }
 }

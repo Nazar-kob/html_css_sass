@@ -51,8 +51,14 @@ body {
 .game__player--column--3 {
   left: 210px;
 }
+.game__player--color--red {
+  background-color: red;
+}
+.game__player--color--green {
+  background-color: green;
+}
 .game__player--color--blue {
-  background-color: blueviolet;
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */
