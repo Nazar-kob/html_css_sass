@@ -13,6 +13,20 @@ $count-column: 3;
   @return $base + ($index - 1) * $cell;
 }
 
+@mixin square($size) {
+  height: $size;
+  width: $size;
+}
+
+@mixin position($shift) {
+  top: $shift;
+  left: $shift;
+}
+
+@mixin circle($size) {
+  @include square($size);
+}
+
 .game {
   position: relative;
   border: 1px gray solid;
@@ -26,17 +40,14 @@ $count-column: 3;
   &__cell {
     box-sizing: border-box;
 
-    height: $cell-size;
-    width: $cell-size;
+    @include square($cell-size);
     border: 1px coral solid;
   }
 
   &__player {
     position: absolute;
-    top: $base-shift;
-    left: $base-shift;
-    height: $player-size;
-    width: $player-size;
+    @include position($base-shift);
+    @include circle($player-size);
     background-color: black;
     border-radius: 50%;
 
