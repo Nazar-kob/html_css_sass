@@ -6,7 +6,7 @@ body {
 .game {
   position: relative;
   border: 1px gray solid;
-  width: 900px;
+  width: 300px;
 }
 .game__field {
   display: flex;
@@ -14,44 +14,44 @@ body {
 }
 .game__cell {
   box-sizing: border-box;
-  height: 300px;
-  width: 300px;
+  height: 100px;
+  width: 100px;
   border: 1px coral solid;
 }
 .game__player {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  height: 240px;
-  width: 240px;
+  top: 10px;
+  left: 10px;
+  height: 80px;
+  width: 80px;
   background-color: black;
   border-radius: 50%;
 }
 .game__player--row--1 {
-  top: 30px;
+  top: 10px;
 }
-.game__player--row-2 {
-  top: 330px;
+.game__player--row--2 {
+  top: 110px;
 }
-.game__player--row-3 {
-  top: 630px;
+.game__player--row--3 {
+  top: 210px;
 }
-.game__player--row-2 {
-  top: 330px;
+.game__player--row--4 {
+  top: 310px;
 }
-.game__player--row-3 {
-  top: 630px;
+.game__player--row--5 {
+  top: 410px;
 }
-.game__player--column-1 {
-  left: 30px;
+.game__player--column--1 {
+  left: 10px;
 }
-.game__player--column-2 {
-  left: 330px;
+.game__player--column--2 {
+  left: 110px;
 }
-.game__player--column-3 {
-  left: 630px;
+.game__player--column--3 {
+  left: 210px;
 }
-.game__player--color-blue {
+.game__player--color--blue {
   background-color: blueviolet;
 }
 
