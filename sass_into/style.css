@@ -8,20 +8,17 @@ body {
   border: 1px gray solid;
   width: 900px;
 }
-
-.game_field {
+.game__field {
   display: flex;
   flex-wrap: wrap;
 }
-
-.game_cell {
+.game__cell {
   box-sizing: border-box;
   height: 300px;
   width: 300px;
   border: 1px coral solid;
 }
-
-.game_player {
+.game__player {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -30,32 +27,31 @@ body {
   background-color: black;
   border-radius: 50%;
 }
-
-.game_player--row-1 {
+.game__player--row--1 {
   top: 30px;
 }
-
-.game_player--row-2 {
+.game__player--row-2 {
   top: 330px;
 }
-
-.game_player--row-3 {
+.game__player--row-3 {
   top: 630px;
 }
-
-.game_player--column-1 {
+.game__player--row-2 {
+  top: 330px;
+}
+.game__player--row-3 {
+  top: 630px;
+}
+.game__player--column-1 {
   left: 30px;
 }
-
-.game_player--column-2 {
+.game__player--column-2 {
   left: 330px;
 }
-
-.game_player--column-3 {
+.game__player--column-3 {
   left: 630px;
 }
-
-.game_player--color-blue {
+.game__player--color-blue {
   background-color: blueviolet;
 }
 
