@@ -8,6 +8,11 @@ $player-size: 0.8 * $cell-size;
 $base-shift: calc(($cell-size - $player-size) / 2);
 $count-row: 5;
 $count-column: 3;
+$title-size: 24px;
+
+%title_addition {
+  background-color: aqua;
+}
 
 @function getShift($base, $index, $cell) {
   @return $base + ($index - 1) * $cell;
@@ -27,11 +32,17 @@ $count-column: 3;
   @include square($size);
 }
 
+.title {
+  @extend %title_addition;
+  font-weight: bold;
+  text-align: center;
+  font-size: $title-size;
+}
+
 .game {
   position: relative;
   border: 1px gray solid;
   width: $count-column * $cell-size;
-
   &__field {
     display: flex;
     flex-wrap: wrap;
@@ -53,7 +64,7 @@ $count-column: 3;
 
     @for $index from 1 through $count-row {
       &--row--#{$index} {
-        top: getShift($base-shift, $index, $cell-size);
+        top: getShift($base-shift, $index, $cell-size) + $title-size;
       }
     }
 
@@ -66,7 +77,7 @@ $count-column: 3;
     $colors: "red" red, "green" green, "blue" blue;
 
     @each $name, $color in $colors {
-      &--color--#{$color} {
+      &--color--#{$name} {
         background-color: #{$color};
       }
     }
