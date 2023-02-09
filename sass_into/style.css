@@ -65,5 +65,10 @@
 .game__player--color--blue {
   background-color: blue;
 }
+@media (min-width: 500px) {
+  .game {
+    background-color: brown;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
