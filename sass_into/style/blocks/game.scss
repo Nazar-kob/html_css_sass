@@ -1,0 +1,48 @@
+@use "../utils/mixins";
+@use "../utils/functions";
+@use "../utils/variables" as *;
+
+.game {
+  position: relative;
+  border: 1px gray solid;
+  width: $count-column * $cell-size;
+  &__field {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__cell {
+    box-sizing: border-box;
+
+    @include mixins.square($cell-size);
+    border: 1px coral solid;
+  }
+
+  &__player {
+    position: absolute;
+    @include mixins.position($base-shift);
+    @include mixins.circle($player-size);
+    background-color: black;
+    border-radius: 50%;
+
+    @for $index from 1 through $count-row {
+      &--row--#{$index} {
+        top: functions.getShift($base-shift, $index, $cell-size) + $title-size;
+      }
+    }
+
+    @for $index from 1 through $count-column {
+      &--column--#{$index} {
+        left: functions.getShift($base-shift, $index, $cell-size);
+      }
+    }
+
+    $colors: "red" red, "green" green, "blue" blue;
+
+    @each $name, $color in $colors {
+      &--color--#{$name} {
+        background-color: #{$color};
+      }
+    }
+  }
+}

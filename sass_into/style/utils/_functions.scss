@@ -1,0 +1,3 @@
+@function getShift($base, $index, $cell) {
+  @return $base + ($index - 1) * $cell;
+}

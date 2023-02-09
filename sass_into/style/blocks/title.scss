@@ -1,0 +1,9 @@
+@use "../utils/variables" as *;
+@use "../utils/extends";
+
+.title {
+  @extend %title_addition;
+  font-weight: bold;
+  text-align: center;
+  font-size: $title-size;
+}
