@@ -1,0 +1,25 @@
+.box {
+    width: 1000px;
+
+    box-sizing: border-box;
+    border: 1px black solid;
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    /* grid-auto-flow: row; */
+
+    justify-content: center;
+    justify-items: center;
+}
+
+.card__box {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border: 1px black solid;
+}
+
+.position {
+    grid-area: 6 / 5;
+}
